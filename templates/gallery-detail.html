@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Gallery Details - World Tree Preservation Website Template
+{% endblock %}
+{% block body %}
+<div class="body">
+		<div class="gallery-details">
+			<div>
+				<h2>Gallery</h2>
+				<div class="paging">
+					<ul>
+						<li>
+							<a href="#" class="prev">Previous</a> |
+						</li>
+						<li>
+							<a href="gallery.html">RETURN TO GALLERY</a> |
+						</li>
+						<li>
+							<a href="#" class="next">Next</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div>
+                {% if id == 1 %}
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/1jaKgIK5EFA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div>
+					<h2>Hawksbill Turtle (Eretmochelys imbricate)</h2>
+					<p>
+						Found in the tropical regions of all the world’s oceans, gulfs and seas- mostly in coral reefs, the Hawksbill Turtle’s population has been estimated to have declined by 80% over the last century. Known to be a subject of heavy trafficking in the tourist trade in tropical regions for its meat and shells, these turtles are being killed mercilessly for quite a period of time. The colourful shells of the Hawksbill Turtle, with beautiful patterns, make them a valuable item in the market, often sold as “tortoiseshell.”
+					</p>
+					<p>
+						Even though in many countries harvesting of its eggs is banned, the practice could not be ceased completely. The declination of its population has also resulted due to the degradation of coral reef species which the Hawksbill Turtle primarily feed on. According to marine conservatives, this family of the turtle is the living representatives of reptiles that have existed in our oceans for the past hundred million years and these turtles are vital for the existence of seagrass beds and coral reefs.
+					</p>
+					<a href="#">Donate Now</a>
+				</div>
+                {% elif id == 2 %}
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/lnbIdSEbsAM" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div>
+					<h2>Vaquita (Phoeocna sinus)</h2>
+					<p>
+						An inhabitant of the shallow, murky waters off the shore of the Baja Peninsula in Mexico, Vaquita is the world’s smallest and critically endangered cetacean.
+					</p>
+					<p>
+						This rare marine mammal in the world is on the brink of extinction only after a half-century of its first sighting. Features of Vaquita include the dark rings around their eyes, lips with dark patches and a thin line from mouth to dorsal fins.
+					</p>
+                        <p>
+                            Extensive use of gill-netting for fishing in the Gulf of California has endangered this marine species, resulting in a gradual drop in population since the 1940s. The gill-netting operation may have been ceased to exist in 1970, but the population fall persists for as much as 15% every year.
+                        </p>
+                        <p>
+                            According to reports, there is only a dozen of this marine mammal left in the world since the percentage of decline in their population was as much as 90% since 2011.
+                        </p>
+					<a href="#">Donate Now</a>
+				</div>
+                {% elif id == 3 %}
+                    <iframe width="650" height="350" src="https://www.youtube.com/embed/bgiPTUy2RqI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div>
+					<h2>Blue Whale (Balaenopteramusculus)</h2>
+					<p>
+						The largest living mammal on earth, the blue whale belongs to the baleen whales and features more than 100 feet in length and around 200 tonnes in weight. There are at least three subspecies of Blue whale and these could be found migrating from both poles in the oceans around the world. Sits on top of the food chain, whales have a significant role in maintaining a healthy marine environment.
+					</p>
+					<p>
+						Unfortunately, excessive commercial hunting has resulted in a decrease of its population drastically and now has posed a threat to its mere existence even though an international ban was constituted in 1966. According to IUCN’s 2016 estimate, the global population of the Blue Whale is 10,000–25,000.
+					</p>
+					<a href="#">Donate Now</a>
+				</div>
+                    {% elif id == 4 %}
+                    <iframe width="650" height="350" src="https://www.youtube.com/embed/oiL8tDCqzy4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div>
+					<h2>Steller Sea Lion (Eumetopiasjubatus)</h2>
+					<p>
+						Evidently the largest member of the Otariid family and the fourth largest of all seal species, this eared seal could be located in the cold coastal waters of the North Pacific. Also known as the northern sea lion, the species is named after Georg Wilhelm Steller, a naturalist who first discovered them in 1741.
+					</p>
+					<p>
+						The high risk of predation by Killer Whales and fishing and harvest by native Alaskans and Canadians for meat, oil, hides and other by-products make this marine life vulnerable to endanger. According to reports, its population has declined by more than 60% due to both natural and human threats since the 1960s. However, the eastern Steller sea lion was omitted from the U.S. Endangered Species List in 2013 after their increasing population in recent years.
+					</p>
+					<a href="#">Donate Now</a>
+				</div>
+                {% endif%}
+
+
+
+
+			</div>
+		</div>
+	</div>
+{% endblock %}
+

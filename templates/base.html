@@ -1,0 +1,112 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'css/style.css'%}">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_1439758_5132ypdso58.css">
+</head>
+<body>
+<div class="header">
+		<div>
+			<a style="color:rgb(60, 194, 47);text-decoration: none;font-size: 45px;margin-top: -30px;" href="{% url 'home' %}" id="logo">Protect nature</a>
+			<div style="overflow: auto;width:900px;">
+				<a href="{% url 'donate' %}">donate</a>
+				<ul style="overflow: auto;display: flex;width:900px;margin-top: 30px;">
+					<li>
+						<a href="{% url 'home' %}">Protection Act</a>
+					</li>
+					<li>
+						<a href="{% url 'about' %}">Protection Knowledge</a>
+					</li>
+					<li>
+						<a href="{% url 'program' %}">Academic Paper</a>
+					</li>
+					<li>
+						<a href="{% url 'gallery' %}">Service Advertising</a>
+					</li>
+					<li>
+						<a href="{% url 'contact' %}">Contact</a>
+					</li>
+					<li>
+						<a href="{% url 'blog' %}">Disscussion Page</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+{% block body %} {% endblock %}
+<div class="footer">
+		<div>
+			<div>
+				<h4>24 hour customer service</h4>
+				<ul>
+					<li class="phone-num">
+						xxx-xxx-xxx <br> xxx-xxx-xxx
+					</li>
+					<li class="email">
+						<a href="#">xxx@xxx</a>
+					</li>
+					<li class="address">
+						xxxx <br> xxx
+					</li>
+				</ul>
+			</div>
+			<div>
+				<h4>Recent Tweets</h4>
+				<ul>
+					<li>
+						<p>
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris fringilla elementum magna.
+						</p>
+						- <span><a href="blog.html">1 day ago</a></span>
+					</li>
+					<li>
+						<p>
+							Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.
+						</p>
+						- <span><a href="blog.html">2 days ago</a></span>
+					</li>
+				</ul>
+			</div>
+			<div class="connect">
+				<h4>Get in touch with us</h4>
+				<a href="#" id="facebook">Facebook</a> <a href="#" id="twitter">Twitter</a> <a href="#" id="googleplus">Google+</a>
+				<form action="index.html">
+					<h4>Newsletter Signup</h4>
+					<input type="text" value="Enter email address" onblur="this.value=!this.value?'Enter email address':this.value;" onfocus="this.select()" onclick="this.value='';">
+					<input type="submit" id="submit" value="">
+				</form>
+			</div>
+		</div>
+		<div>
+			<ul>
+				<li>
+					<a href="{% url 'home' %}">Home</a>
+				</li>
+				<li>
+					<a href="{% url 'about' %}">About</a>
+				</li>
+				<li>
+					<a href="{% url 'program' %}">Our Programs</a>
+				</li>
+				<li>
+					<a href="{% url 'gallery' %}">Gallery</a>
+				</li>
+				<li>
+					<a href="{% url 'contact' %}">Contact</a>
+				</li>
+				<li>
+					<a href="{% url 'blog' %}">Blog</a>
+				</li>
+			</ul>
+			<p>
+			</p>
+		</div>
+	</div>
+{% block script %}
+
+{% endblock %}
+</body>
+</html>

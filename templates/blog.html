@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Blog - World Tree Preservation Website Template
+{% endblock %}
+{% block body %}
+<div class="body">
+		<div class="blog">
+			<div>
+                <form method="post" action="">
+                    {% csrf_token %}
+                    username:<input name="username" type="text" style="outline: none;width: 200px" placeholder="Please enter the user name" id="username">
+                    <br>
+                    comment: <textarea name="comment" placeholder="Please enter a comment" id="content" style="width: 695px;height: 90px;outline: none;resize: none"></textarea>
+                   <div align="right" style="margin-bottom: 1%;">
+                       <input type="submit" id="submit" value="Comment"></input>
+                   </div>
+                </form>
+                <hr>
+				<ul>
+                    {% for foo in all %}
+                        <li style="clear: both">
+						<div>
+							<span>Posted by <i class="iconfont icon-yonghu"></i>{{ foo.username }} {{ foo.ctime }}</span>
+						</div>
+                        <div>
+                            {{ foo.comment }}
+                        </div>
+                        <div align="right">
+                            <a style="cursor: pointer" href="{% url 'blog_del' foo.id %}" onclick="return confirm('Are you sure to delete it？')">delete</a>
+                        </div>
+
+					</li>
+                    {% endfor %}
+				</ul>
+				<a href="#">Older Posts</a>
+			</div>
+			<div class="sidebar">
+				<div>
+					<h4>Categories</h4>
+					<ul>
+						<li>
+							<a href="#">Category Title One</a>
+						</li>
+						<li>
+							<a href="#">Category Title Two</a>
+						</li>
+						<li>
+							<a href="#">Category Title Three</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h4>Recent Blog Posts</h4>
+					<ul>
+						<li>
+							<a href="{% url 'program_detail' 1 %}">Food and Climate Change</a>
+						</li>
+						<li>
+							<a href="{% url 'program_detail' 2 %}">Crops and Ecology</a>
+						</li>
+						<li>
+							<a href="{% url 'program_detail' 3 %}">Ecological and Urban Agriculture</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h4>Archives</h4>
+					<ul>
+						<li>
+							<a href="#">March 2023</a>
+						</li>
+						<li>
+							<a href="#">February 2023</a>
+						</li>
+						<li>
+							<a href="#">January 2023</a>
+						</li>
+						<li>
+							<a href="#">December 2023</a>
+						</li>
+						<li>
+							<a href="#">November 2023</a>
+						</li>
+					</ul>
+				</div>
+				<div class="section">
+					<h4>From The Gallery</h4>
+					<ul>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb1.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb2.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb3.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb4.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb5.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb6.jpg' %}" alt=""></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+{% block script %}
+    <script>
+        function createXMLHttp() {
+            var xmlhttp = window.XMLHttpRequest ? new XMLHttpRequest():ActiveXobject("Msxml12.XMLHTTP");
+            return {
+                sendRequest({method, url, data=null, success, error}){
+                    xmlhttp.open(method, url);
+                    if (method.toUpperCase() == 'GET'){
+                        xmlhttp.send()
+                    }else {
+                        xmlhttp.setRequestHeader('Content-Type', 'application/json')
+                        xmlhttp.send(JSON.stringify(data))
+                    }
+                    xmlhttp.onreadystatechange = function () {
+                        if (xmlhttp.readyState == 4){
+                            if (xmlhttp.status == 200){
+                                success(xmlhttp)
+                            } else {
+                                error(xmlhttp)
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+
+        document.getElementById('submit').onclick = function(){
+            var username = document.getElementById('username').value;
+            var comment = document.getElementById('content').value;
+            if (!username || !comment){
+                alert('The user name and content cannot be empty');
+                return false
+            }else if(username.length >20){
+                alert('The username length must not be greater than 20');
+                return false
+            }else if(comment.length > 300){
+                alert('A comment should be no longer than 20');
+                return false
+            }else {
+                alert('comment success');
+
+            }
+        }
+
+    </script>
+{% endblock %}

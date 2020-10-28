@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Programs - World Tree Preservation Website Template
+{% endblock %}
+{% block body %}
+<div class="body">
+		<div class="programs">
+			<h2>Our Programs</h2>
+			<ul>
+				<li class="selected">
+					<a href="#"><img src="{% static 'images/tree-planting.jpg' %}" alt=""></a> <span><a href="#">ENVIRONMENTAL PROTECTION AND ECOLOGY</a></span>
+				</li>
+				<li>
+					<a href="#"><img src="{% static 'images/paper-recycling.jpg' %}" alt=""></a> <span><a href="#">Paper Recycling</a></span>
+				</li>
+				<li>
+					<a href="#"><img src="{% static 'images/earth-appreciation.jpg' %}" alt=""></a> <span><a href="#">Earth Apreciation</a></span>
+				</li>
+			</ul>
+			<div>
+				<h2>Environmental Protection and Ecology</h2>
+				<img src="{% static 'images/tree-planting2.jpg' %}" alt="">
+				<p>
+					Environmental protection has always been practiced by humans in one form or another. However, as anthropogenic pressures on the environment have escalated over the past century, the need for systematic environmental protection has increased. This has led to considerable experimentation with the domestic and international measures that are used to achieve environmental protection objectives. Some of these have been successful, but the overall picture is one of failure.
+
+Due to the failings of the past and greater awareness of the complexity of environmental problems, there is a growing acceptance that environmental protection is best achieved through the use of a multipronged approach. This requires the use of a combination of regulatory, economic, voluntary, and information instruments, where the policy mix is determined on the basis of the available evidence regarding cost-effectiveness.
+
+The international challenge lies in the development of effective and equitable approaches to global environmental problems that are supported by a well-resourced bureaucracy and appropriate financial mechanisms. The threat posed by climate change has added greater urgency to the push for effective international environmental governance arrangements.
+				</p>
+			</div>
+
+			<div class="sidebar">
+				<div>
+					<h4>Categories</h4>
+					<ul>
+						<li>
+							<a href="#">Category Title One</a>
+						</li>
+						<li>
+							<a href="#">Category Title Two</a>
+						</li>
+						<li>
+							<a href="#">Category Title Three</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h4>Recent Blog Posts</h4>
+					<ul>
+						<li>
+							<a href="{% url 'program_detail' 1 %}">Food and Climate Change</a>
+						</li>
+						<li>
+							<a href="{% url 'program_detail' 2 %}">Crops and Ecology</a>
+						</li>
+						<li>
+							<a href="{% url 'program_detail' 3 %}">Ecological and Urban Agriculture</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h4>Archives</h4>
+					<ul>
+						<li>
+							<a href="#">March 2023</a>
+						</li>
+						<li>
+							<a href="#">February 2023</a>
+						</li>
+						<li>
+							<a href="#">January 2023</a>
+						</li>
+						<li>
+							<a href="#">December 2023</a>
+						</li>
+						<li>
+							<a href="#">November 2023</a>
+						</li>
+					</ul>
+				</div>
+				<div class="section">
+					<h4>From The Gallery</h4>
+					<ul>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb1.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb2.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb3.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{%static 'images/gallery-thumb4.jpg'%}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb5.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb6.jpg' %}" alt=""></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+

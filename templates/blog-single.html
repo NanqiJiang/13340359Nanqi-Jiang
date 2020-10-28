@@ -1,0 +1,122 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Blog - World Tree Preservation Website Template
+{% endblock %}
+{% block body %}
+<div class="body">
+		<div class="blog-single">
+			<div>
+				<span>Apr <br> 27</span>
+				<div>
+					<h4>Blog Post TItle One</h4>
+					<span>Posted in <a href="#">Category Title One</a> by <a href="#">admin</a></span> <span class="comment"><a href="#">1 Comments</a></span>
+				</div>
+				<img src="{% static 'images/blog-post-1.jpg' %}" alt="">
+				<div class="section">
+					<span>1 Comment</span> <a href="#"><img src="{% static 'images/comment-avatar.jpg' %}" alt=""></a>
+					<div>
+						<span><a href="#">Skies & Rockets</a> June 22, 2023 at 3:40 pm</span>
+						<p>
+							Mauris tellus libero, ullamcorper nec blandit eu, luctus eu augue. Duis ipsum felis, rutrum vel condimentum consectetur, mattis vitae risus.
+						</p>
+						<a href="#">Reply</a>
+					</div>
+				</div>
+				<form action="index.html">
+					<div>
+						<span>Reply Form</span>
+						<label for="name">Name
+							<input type="text" id="name">
+						</label>
+						<label for="email">Email Address
+							<input type="text" id="email">
+						</label>
+						<label for="website">Website
+							<input type="text" id="website">
+						</label>
+					</div>
+					<div>
+						<label for="comment">Comment</label>
+						<textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+						<input type="submit" value="">
+					</div>
+				</form>
+			</div>
+			<div class="sidebar">
+				<div>
+					<h4>Categories</h4>
+					<ul>
+						<li>
+							<a href="#">Category Title One</a>
+						</li>
+						<li>
+							<a href="#">Category Title Two</a>
+						</li>
+						<li>
+							<a href="#">Category Title Three</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h4>Recent Blog Posts</h4>
+					<ul>
+						<li>
+							<a href="{% url 'program_detail' 1 %}">Food and Climate Change</a>
+						</li>
+						<li>
+							<a href="{% url 'program_detail' 2 %}">Crops and Ecology</a>
+						</li>
+						<li>
+							<a href="{% url 'program_detail' 3 %}">Ecological and Urban Agriculture</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h4>Archives</h4>
+					<ul>
+						<li>
+							<a href="#">March 2023</a>
+						</li>
+						<li>
+							<a href="#">February 2023</a>
+						</li>
+						<li>
+							<a href="#">January 2023</a>
+						</li>
+						<li>
+							<a href="#">December 2023</a>
+						</li>
+						<li>
+							<a href="#">November 2023</a>
+						</li>
+					</ul>
+				</div>
+				<div class="section">
+					<h4>From The Gallery</h4>
+					<ul>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb1.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb2.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb3.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb4.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb5.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb6.jpg' %}" alt=""></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+

@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Contact - World Tree Preservation Website Template
+{% endblock %}
+{% block body %}
+<div class="body">
+		<div class="contact">
+			<div>
+				<h2>Contact</h2>
+				<div>
+					<h4>Contact Us</h4>
+					<p>
+						For further inquiries, help or suggestions. You may contact us through the following:
+					</p>
+					<ul>
+						<li class="phone-num">
+							xxx-xxx-xxx <br> xxx-xxx-xxx
+						</li>
+						<li class="email">
+							<a href="#">xxx@xxx</a> <br> <a href="#">xxx@xx.xx</a>
+						</li>
+						<li class="address">
+							xxxx <br> xxx, xxxx
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div>
+				<h2>Send Us A Message</h2>
+				<form action="index.html">
+					<label for="fname">First Name
+						<input type="text" id="fname">
+					</label>
+					<label for="lname">Last Name
+						<input type="text" id="lname">
+					</label>
+					<label for="email">Email
+						<input type="text" id="email">
+					</label>
+					<label for="email2">Retype Email Address
+						<input type="text" id="email2">
+					</label>
+					<label for="subject">Subject
+						<input type="text" id="subject">
+					</label>
+					<label for="message" class="message">Message</label>
+					<textarea name="message" id="message" cols="30" rows="10"></textarea>
+					<input type="submit" value="">
+				</form>
+			</div>
+		</div>
+	</div>
+{% endblock %}

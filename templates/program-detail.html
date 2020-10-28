@@ -1,0 +1,149 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Programs - World Tree Preservation Website Template
+{% endblock %}
+{% block body %}
+<div class="body">
+		<div class="programs">
+			<h2>Our Programs</h2>
+			<ul>
+				<li class="selected">
+					<a href="#"><img src="{% static 'images/tree-planting.jpg' %}" alt=""></a> <span><a href="#">ENVIRONMENTAL PROTECTION AND ECOLOGY</a></span>
+				</li>
+				<li>
+					<a href="#"><img src="{% static 'images/paper-recycling.jpg' %}" alt=""></a> <span><a href="#">Paper Recycling</a></span>
+				</li>
+				<li>
+					<a href="#"><img src="{% static 'images/earth-appreciation.jpg' %}" alt=""></a> <span><a href="#">Earth Apreciation</a></span>
+				</li>
+			</ul>
+            {% if id == 1 %}
+                <div>
+				<h2>Food and Climate Change</h2>
+				<img width="460" height="273" src="http://www.foodsystemprimer.org/sebin/x/u/drought-tx-800.jpg" alt="">
+				<p>
+					The term “weather” refers to how the atmosphere behaves in a specific area over a short period of time, usually hours or days. “Climate” refers to general weather patterns over a broad area for a long period of time. Both weather and climate account for qualities like temperature, precipitation, and humidity.
+				</p>
+                <p>
+                    The global climate is warming at an unprecedented rate.1 An overwhelming body of evidence suggests global temperatures will continue to rise, and that human activities such as fossil fuel combustion, deforestation, and agriculture are the dominant cause.1,2 These activities release greenhouse gas (GHG) emissions, such as carbon dioxide, methane, and nitrous oxide, that trap the sun’s heat and warm the atmosphere—hence the name “greenhouse.” Natural processes also produce GHG emissions; however, these have generally been counterbalanced by the capacity of trees, soil, oceans, and other sinks (storehouses) to sequester (capture and store) emissions.3
+                </p>
+                <p>
+                    Scientists and world leaders have called for immediate and dramatic action to reduce GHG emissions, enhance emissions sinks,2 and prepare for the impacts that are expected to occur.5 The food system is one of the areas where urgent interventions are needed most.
+                </p>
+			</div>
+                {% elif id == 2 %}
+                <div>
+				<h2>Crops and Ecology</h2>
+				<img width="460" height="273" src="http://www.foodsystemprimer.org/sebin/r/d/will-allen-800.jpg" alt="">
+				<p>
+					Agriculture is built upon fertile soil, a favorable climate, ample freshwater, a diversity of plant and animal species, and the skills and labor of farmers and farm workers. These are the ecological foundations of our food system. They are also endangered by depletion, disruption, or disease. Finding ways to better preserve the health of agricultural ecosystems is key to the long-term sustainability of our food supply.
+				</p>
+                <p>
+                    Most of the challenges described here relate most directly to crop production, but because crops are grown in large part to feed livestock, the production of meat, milk, and eggs is also heavily implicated. In North America, for example, only 40 percent of cropland is used to feed people directly; most of the remainder is used to grow feed for animals.
+                </p>
+                <p>
+                    Almost everything we eat can be traced back to soil. Far from being lifeless dirt, fertile soil is teeming with organisms, including worms, arthropods, bacteria, fungi, and plant life. The decaying (and fully decayed) remains of these and other organisms, and their excrement, make up the part of soil called organic matter. The remaining mineral fraction of soil is composed of sand, silt, and clay.
+                </p>
+                <p>
+                    Organic matter and the organisms that inhabit it are a large part of what makes soil fertile. Organic matter soaks up water and nutrients like a sponge, helping plant roots to access them. Because soil organic matter helps capture and hold water, it is particularly important during droughts. Organic matter also helps aerate soil, providing roots with oxygen, and it stores carbon that would otherwise contribute to climate change.
+                </p>
+                <p>
+                    Building and maintaining healthy soil require care on the part of farmers. Throughout history, farmers have mismanaged this essential resource, sometimes with catastrophic results. Plowing soil and compacting it (e.g., by driving over it with heavy machinery), for example, can make soil more prone to erosion—the removal of soil by wind, rain, and other forces. Erosion is particularly damaging because the top layer of soil (topsoil) is richest in organic matter. Erosion can also contribute to water pollution by transporting pesticides and excess nutrients into nearby streams and rivers. On much of the world’s agricultural land, fertile soil is still being eroded much faster than it can be restored by natural processes.
+                </p>
+			</div>
+                {% elif id == 3 %}
+                <div>
+				<h2>Ecological and Urban Agriculture</h2>
+				<img width="460" height="273" src="http://www.foodsystemprimer.org/sebin/r/h/aquaponics_800_copy_from_seafood.jpg" alt="">
+				<p>
+					The 20th century saw the rapid growth of industrial agriculture—a model of farming characterized by specialization, mechanization, a heavy reliance on chemical and pharmaceutical inputs, and a shift toward fewer and larger farms. In many countries, including the U.S., the industrial model has become the dominant one.
+				</p>
+                <p>
+                    Partly in response to the health and ecological problems of industrial agriculture, a growing movement of farmers have adopted alternative approaches to producing food. These go by many names, such as sustainable, ecological, and organic. The approaches often overlap, and in some cases borrow ideas from the industrial model. These approaches are hardly new; principles of agroecology were developed over thousands of years. Farmers are revisiting and refining these approaches based on new insights, new technology, and new challenges, such as climate change.
+                </p>
+                <p>
+                    The breadth of different approaches to producing food raises questions as to which set of practices is best. The challenges in agriculture, from feeding the world to sustaining our capacity to feed future generations, are varied and complex. Addressing these challenges will likely require not one single tactic but a diversity of methods—each unique to time, place, and culture—that are as varied as the problems they aim to solve.
+                </p>
+			</div>
+            {% endif %}
+
+
+            
+			<div class="sidebar">
+				<div>
+					<h4>Categories</h4>
+					<ul>
+						<li>
+							<a href="#">Category Title One</a>
+						</li>
+						<li>
+							<a href="#">Category Title Two</a>
+						</li>
+						<li>
+							<a href="#">Category Title Three</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h4>Recent Blog Posts</h4>
+					<ul>
+						<li>
+							<a href="{% url 'program_detail' 1 %}">Food and Climate Change</a>
+						</li>
+						<li>
+							<a href="{% url 'program_detail' 2 %}">Crops and Ecology</a>
+						</li>
+						<li>
+							<a href="{% url 'program_detail' 3 %}">Ecological and Urban Agriculture</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<h4>Archives</h4>
+					<ul>
+						<li>
+							<a href="#">March 2023</a>
+						</li>
+						<li>
+							<a href="#">February 2023</a>
+						</li>
+						<li>
+							<a href="#">January 2023</a>
+						</li>
+						<li>
+							<a href="#">December 2023</a>
+						</li>
+						<li>
+							<a href="#">November 2023</a>
+						</li>
+					</ul>
+				</div>
+				<div class="section">
+					<h4>From The Gallery</h4>
+					<ul>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb1.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb2.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb3.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{%static 'images/gallery-thumb4.jpg'%}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb5.jpg' %}" alt=""></a>
+						</li>
+						<li>
+							<a href="{% url 'gallery' %}"><img src="{% static 'images/gallery-thumb6.jpg' %}" alt=""></a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+

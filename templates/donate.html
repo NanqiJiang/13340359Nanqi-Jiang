@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Donate - World Tree Preservation Website Template
+{% endblock %}
+{% block body %}
+<div class="body">
+		<div class="donate">
+			<div>
+				<h2>Contact</h2>
+				<div>
+					<h4>Contact Us</h4>
+					<p>
+						For further inquiries, help or suggestions. You may contact us through the following:
+					</p>
+					<ul>
+						<li class="phone-num">
+							xxx-xxx-xxx <br> xxx-xxx-xxx
+						</li>
+						<li class="email">
+							<a href="#">xx@xxx</a> <br> <a href="#">xx@xx.xx</a>
+						</li>
+						<li class="address">
+							xxxx <br> xxx, xxx
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div>
+				<h2>Please Choose A Method Of Donation</h2>
+				<ul>
+					<li>
+						<a href="#"><img src="{% static 'images/donate-online.png' %}" alt=""></a>
+					</li>
+					<li>
+						<a href="#"><img src="{% static 'images/donate-email.png' %}" alt=""></a>
+					</li>
+					<li>
+						<a href="#"><img src="{% static 'images/donate-phone.png' %}" alt=""></a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+{% endblock %}

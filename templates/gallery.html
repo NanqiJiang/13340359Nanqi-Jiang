@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+Gallery - World Tree Preservation Website Template
+{% endblock %}
+{% block body %}
+<div class="body">
+		<div class="gallery">
+			<div>
+				<h2>Gallery</h2>
+				<div>
+					<span>Sort By:</span>
+					<ul>
+						<li class="selected">
+							<a href="#">View All</a> |
+						</li>
+						<li>
+							<a href="#">Images</a> |
+						</li>
+						<li>
+							<a href="#">Videos</a>
+						</li>
+					</ul>
+				</div>
+				<div class="paging">
+					<span>Page 1 of 2</span>
+					<ul>
+						<li>
+							<a href="#" class="prev">prev</a>
+						</li>
+						<li class="selected">
+							<a href="#">1</a>
+						</li>
+						<li>
+							<a href="#">2</a>
+						</li>
+						<li>
+							<a href="#" class="next">next</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<ul>
+				<li>
+					<a href="{% url 'gallery-detail' 1 %}"><img width="220" height="180" src="{% static 'images/Hawksbill Turtle.png' %}" alt=""></a>
+					<h4><a href="{% url 'gallery-detail' 1 %}">Hawksbill Turtle</a></h4>
+					<p>
+						Found in the tropical regions of all the world’s oceans, gulfs and seas- mostly in coral reefs, the Hawksbill Turtle’s population has been estimated to have declined by 80% over the last century.
+					</p>
+				</li>
+				<li>
+					<a href="{% url 'gallery-detail' 2 %}"><img width="220" height="180" src="{% static 'images/Vaquita.png' %}" alt=""></a>
+					<h4><a href="{% url 'gallery-detail' 2 %}">Vaquita</a></h4>
+					<p>
+						An inhabitant of the shallow, murky waters off the shore of the Baja Peninsula in Mexico, Vaquita is the world’s smallest and critically endangered cetacean.
+					</p>
+				</li>
+				<li>
+					<a href="{% url 'gallery-detail' 3 %}"><img width="220" height="180" src="{% static 'images/Blue Whale.png' %}" alt=""></a>
+					<h4><a href="{% url 'gallery-detail' 3 %}">Blue Whale</a></h4>
+					<p>
+						The largest living mammal on earth, the blue whale belongs to the baleen whales and features more than 100 feet in length and around 200 tonnes in weight.
+					</p>
+				</li>
+                <li>
+					<a href="{% url 'gallery-detail' 4 %}"><img width="220" height="180" src="{% static 'images/Steller Sea Lion.png' %}" alt=""></a>
+					<h4><a href="{% url 'gallery-detail' 4 %}">Steller Sea Lion</a></h4>
+					<p>
+						Evidently the largest member of the Otariid family and the fourth largest of all seal species, this eared seal could be located in the cold coastal waters of the North Pacific. Also known as the northern sea lion, the species is named after Georg Wilhelm Steller, a naturalist who first discovered them in 1741.
+					</p>
+				</li>
+
+			</ul>
+		</div>
+	</div>
+{% endblock %}

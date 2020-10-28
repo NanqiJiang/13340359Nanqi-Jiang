@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+World Tree Preservation Website Template
+{% endblock %}
+{% block body %}
+<div class="body">
+		<div class="home">
+			<div class="featured">
+				<div>
+					<p>
+						Environmental protection can be defined as<br> the prevention of unwanted changes to ecosystems<br> and their constituent parts.
+					</p>
+					<h2><br><br> <span>Save The Future.</span></h2>
+				</div>
+			</div>
+			<div class="section">
+				<div>
+					<div>
+						<a href="{% url 'program' %}"><img width=460 height=204 src="https://www.wwf.org.au/Images/UserUploadedImages/416/Solar-installation.jpg" alt=""></a>
+						<p>
+							Our once-in-a-lifetime opportunity to become a renewable energy export powerhouse
+						</p>
+					</div>
+					<div>
+						<h3><a href="{% url 'program' %}">Top Programs</a></h3>
+						<ul>
+							<li>
+								<a href="{% url 'program' %}"><img width="218" height="148" src="https://www.wwf.org.au/Images/UserUploadedImages/403/img-aerial-bushfire-kangaroo-island-THUMBNAIL-500px.jpg" alt=""></a>
+								<h4><a href="{% url 'program' %}">Australian Bushfires</a></h4>
+								<p>
+									Recovering and restoring Australia after the devastating 2019-20 bushfires.
+								</p>
+							</li>
+							<li>
+								<a href="{% url 'program' %}"><img width="218" height="148" src="https://www.wwf.org.au/Images/UserUploadedImages/494/img-hardy-reef-1400x350.jpg" alt=""></a>
+								<h4><a href="{% url 'program' %}">Living Planet Report</a></h4>
+								<p>
+									The future of the planet is in our hands. WWF’s Living Planet Report 2020 shows the scale of the challenge – and what we can do about it.
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div>
+					<div>
+						<a href="{% url 'program' %}"><img width="460" height="204" src="https://www.wwf.org.au/Images/UserUploadedImages/403/img-bushfire-bowraville-500px.jpg" alt=""></a>
+						<p>
+							Nearly three billion animals – mammals, reptiles, birds, and frogs – were killed or displaced by Australia’s devastating 2019-20 bushfires.
+						</p>
+					</div>
+					<div>
+						<h3><a href="{% url 'blog' %}">Recent Blog Posts</a></h3>
+						<ul>
+							<li>
+								<a href="{% url 'blog' %}"><img width="98" height="95" src="https://www.wwf.org.au/Images/UserUploadedImages/416/img_Kookaburra_after_bushfires_Adam_Stevenson_1000px.jpg" alt=""></a>
+								<div>
+									<h4><a href="{% url 'blog' %}">WWF Calls for Global Support to Establish a AUD$30 million Australian Wildlife and Nature Recovery Fund</a></h4>
+									<p>
+										Whilst we may not have enough details for a complete solution yet, we do know we will need a national wildlife and nature recovery plan. <a href="{% url 'blog' %}" class="more">Read More</a>
+									</p>
+								</div>
+							</li>
+							<li>
+								<a href="{% url 'blog' %}"><img width="98" height="95" src="https://www.wwf.org.au/Images/UserUploadedImages/403/img-zero-waste-products-500px.jpg" alt=""></a>
+								<div>
+									<h4><a href="{% url 'blog' %}">24+ Tips for going plastic free from Zero Waste Bloggers</a></h4>
+									<p>
+										Our favourite zero waste bloggers give us some tips on living a sustainable lifestyle and give us the insights to going zero waste.<a href="{% url 'blog' %}" class="more">Read More</a>
+									</p>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
